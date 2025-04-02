@@ -5,6 +5,77 @@ body {
   padding: 0;
 }
 
-h1 {
+#countries-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.countryDiv {
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.countryDiv:hover {
+  transform: scale(1.05);
+}
+
+.countryDiv img {
+  width: 100px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modalContent img{
+  width: 100px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
   color: #333;
+}
+
+.closeModal:hover {
+  color: red;
 }
